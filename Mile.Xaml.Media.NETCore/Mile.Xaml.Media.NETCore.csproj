@@ -1,0 +1,37 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <Product>Mile.Xaml.Media Library (.NETCore 8+)</Product>
+    <TargetFramework>net8.0-windows10.0.22621.0</TargetFramework>
+    <TargetPlatformVersion>10.0.22621.0</TargetPlatformVersion>
+    <TargetPlatformMinVersion>10.0.19041.0</TargetPlatformMinVersion>
+    <RootNamespace>Mile.Xaml.Media</RootNamespace>
+    <Platforms>x86;x64;ARM64</Platforms>
+    <RuntimeIdentifiers>win-x86;win-x64;win-arm64</RuntimeIdentifiers>
+    <UseWindowsForms>true</UseWindowsForms>
+    <_SuppressWinFormsTrimError>true</_SuppressWinFormsTrimError>
+    <LangVersion>12.0</LangVersion>
+    <WindowsSdkPackageVersion>10.0.22621.39</WindowsSdkPackageVersion>
+    <ProductVersion>1.0.0.0</ProductVersion>
+    <FileVersion>1.0.0.0</FileVersion>
+    <AssemblyTitle>Mile.Xaml.Media Library for .NET Core 8+</AssemblyTitle>
+    <Company>MinecraftXinYi Person</Company>
+  </PropertyGroup>
+
+	<ItemGroup>
+		<CompilerVisibleProperty Include="CsWinRTUseWindowsUIXamlProjections" />
+		<RuntimeHostConfigurationOption Include="CSWINRT_USE_WINDOWS_UI_XAML_PROJECTIONS" Value="$(CsWinRTUseWindowsUIXamlProjections)" Trim="true" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Windows.CsWinRT" Version="2.1.1" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Content Update="Mile.Xaml\Assets\NoiseAsset_256x256_PNG.png">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+	</ItemGroup>
+
+	<Import Project="..\Mile.Xaml.Media.NETShared\Mile.Xaml.Media.NETShared.projitems" Label="Shared" />
+
+</Project>
